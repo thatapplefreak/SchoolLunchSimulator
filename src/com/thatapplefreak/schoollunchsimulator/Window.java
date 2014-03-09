@@ -17,7 +17,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JTextPane;
 import javax.swing.JScrollPane;
 
-public class window extends JFrame {
+public class Window extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +28,7 @@ public class window extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					window frame = new window();
+					Window frame = new Window();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,7 +45,7 @@ public class window extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public window() {
+	public Window() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 500);
 		contentPane = new JPanel();
@@ -64,7 +64,7 @@ public class window extends JFrame {
 		btnStartSimulation.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent arg0) {
-				Runner.run(window.this, Float.parseFloat((String) comboBox.getSelectedItem()));
+				Runner.run(Window.this, Float.parseFloat((String) comboBox.getSelectedItem()));
 			}
 		});
 		contentPane.add(btnStartSimulation);
